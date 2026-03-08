@@ -74,3 +74,9 @@ python "WalkGeoAI Inference Pipeline.py"
 ## 📖 Feature Dictionary
 
 For a detailed explanation of the input features required by the model (e.g., `net_betweenness_seg_val`, `bldg_far_buf200_val`, `poi_l1_shopping_buf200_density`), please refer to the included `Feature dictionary.csv`.
+
+---
+
+## 🌍 Global Dataset Availability
+
+The complete extracted feature matrices, raw GIS files, and final street-level pedestrian density predictions for **20 major global cities** are openly available for direct download on Zenodo: **[https://zenodo.org/records/18911188](https://zenodo.org/records/18911188)**.
