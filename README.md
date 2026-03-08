@@ -79,4 +79,4 @@ For a detailed explanation of the input features required by the model (e.g., `n
 
 ## 🌍 Global Dataset Availability
 
-The complete extracted feature matrices, raw GIS files, and final street-level pedestrian density predictions for **20 major global cities** are openly available for direct download on Zenodo: **[https://zenodo.org/records/18911188](https://zenodo.org/records/18911188)**.
+The complete extracted feature matrices, raw GIS files, and final street-level pedestrian density predictions for **20 global cities** are openly available for direct download on Zenodo: **[https://zenodo.org/records/18911188](https://zenodo.org/records/18911188)**.
