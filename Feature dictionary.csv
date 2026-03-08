@@ -1,0 +1,206 @@
+﻿Group,Column Name,Description
+Key,id,Unique road segment identifier.
+Network Topology,net_betweenness_seg_val,Approx. edge betweenness centrality (normalized); proxy for through-traffic potential (from node estimates averaged over endpoints).
+Network Topology,net_closeness_seg_val,Approx. closeness centrality (normalized) at segment endpoints (average); higher = more central/accessible in the network.
+Network Topology,net_straightness_seg_val,"Straightness = Euclidean distance / network (segment) length; 1 = perfectly straight, <1 = detour/curvy."
+Network Topology,net_degree_seg_val,Average node degree of the two endpoints; higher = more connected intersections.
+Network Topology,net_length_seg_val,Segment physical length (meters).
+Network Topology,net_rt_motorway_seg_bin,Binary indicator: OSM 'highway' type == 'motorway'.
+Network Topology,net_rt_trunk_seg_bin,Binary indicator: OSM 'highway' type == 'trunk'.
+Network Topology,net_rt_primary_seg_bin,Binary indicator: OSM 'highway' type == 'primary'.
+Network Topology,net_rt_secondary_seg_bin,Binary indicator: OSM 'highway' type == 'secondary'.
+Network Topology,net_rt_tertiary_seg_bin,Binary indicator: OSM 'highway' type == 'tertiary'.
+Network Topology,net_rt_residential_seg_bin,Binary indicator: OSM 'highway' type == 'residential'.
+Network Topology,net_rt_living_street_seg_bin,Binary indicator: OSM 'highway' type == 'living_street'.
+Network Topology,net_rt_pedestrian_seg_bin,Binary indicator: OSM 'highway' type == 'pedestrian'.
+Network Topology,net_rt_cycleway_seg_bin,Binary indicator: OSM 'highway' type == 'cycleway'.
+Network Topology,net_rt_footway_seg_bin,Binary indicator: OSM 'highway' type == 'footway'.
+Network Topology,net_rt_path_seg_bin,Binary indicator: OSM 'highway' type == 'path'.
+Network Topology,net_rt_service_seg_bin,Binary indicator: OSM 'highway' type == 'service'.
+Network Topology,net_rt_other_seg_bin,Binary indicator: OSM 'highway' type == 'other'.
+Network Topology,net_intx_density_buf50_density,Intersection density within 50m buffer: count of nodes with degree≥3 per hectare.
+Network Topology,net_deadend_ratio_buf50_ratio,Dead-end ratio within 50m buffer: proportion of degree-1 nodes among all nodes in buffer.
+Network Topology,net_road_density_buf50_density,Road density within 50m buffer: total road length (km) per km2.
+Network Topology,net_intx_density_buf200_density,Intersection density within 200m buffer: count of nodes with degree≥3 per hectare.
+Network Topology,net_deadend_ratio_buf200_ratio,Dead-end ratio within 200m buffer: proportion of degree-1 nodes among all nodes in buffer.
+Network Topology,net_road_density_buf200_density,Road density within 200m buffer: total road length (km) per km2.
+Network Topology,net_intx_density_buf500_density,Intersection density within 500m buffer: count of nodes with degree≥3 per hectare.
+Network Topology,net_deadend_ratio_buf500_ratio,Dead-end ratio within 500m buffer: proportion of degree-1 nodes among all nodes in buffer.
+Network Topology,net_road_density_buf500_density,Road density within 500m buffer: total road length (km) per km2.
+Network Topology,net_circuity_buf500_mean,Mean circuity within 500m: average network distance / Euclidean distance for local connections; higher = more circuitous street pattern.
+Network Topology,net_orient_entropy_buf500_val,Orientation entropy within 500m: Shannon entropy of edge bearings; higher = more grid-like/diverse directions.
+Terrain & Topography,terrain_slope_seg_val,Segment slope (%): |elev_end - elev_start| / segment_length × 100.
+Terrain & Topography,terrain_elevation_seg_val,Elevation at segment midpoint (meters).
+Terrain & Topography,terrain_rel_elevation_seg_val,Relative elevation (meters): segment midpoint elevation minus mean elevation within 500m.
+Terrain & Topography,terrain_slope_buf200_mean,Mean terrain slope (%) within 200m buffer.
+Terrain & Topography,terrain_slope_buf200_std,Std. dev. of terrain slope (%) within 200m buffer (ruggedness proxy).
+Terrain & Topography,terrain_slope_buf500_mean,Mean terrain slope (%) within 500m buffer.
+Terrain & Topography,terrain_slope_buf500_std,Std. dev. of terrain slope (%) within 500m buffer (ruggedness proxy).
+Urban Structure & Context,urban_dist_pwc_seg_val,Distance to population-weighted center (km) from segment midpoint.
+Urban Structure & Context,urban_dist_edge_seg_val,Distance to urban boundary / city edge (km) from segment midpoint.
+Urban Structure & Context,urban_core_indicator_seg_bin,"Binary indicator: segment is inside the defined urban core (e.g., central area threshold)."
+Urban Structure & Context,urban_dist_subcenter1_seg_val,Distance to primary urban subcenter (km) from segment midpoint.
+Urban Structure & Context,urban_dist_subcenter2_seg_val,Distance to secondary urban subcenter (km) from segment midpoint.
+Urban Structure & Context,urban_subcenter_rank_seg_val,"Assigned subcenter rank (e.g., 1=primary, 2=secondary, ...), based on nearest/strongest subcenter."
+Building Morphology,bldg_density_buf50_density,Building density within 50m buffer: buildings per hectare.
+Building Morphology,bldg_coverage_buf50_ratio,Building coverage within 50m buffer: total footprint area / buffer area (ratio).
+Building Morphology,bldg_perimeter_density_buf50_density,Building perimeter density within 50m buffer: total building perimeter length per hectare.
+Building Morphology,bldg_height_buf50_mean,Mean building height (m) within 50m buffer.
+Building Morphology,bldg_height_buf50_std,Std. dev. of building height (m) within 50m buffer (heterogeneity).
+Building Morphology,bldg_height_buf50_p90,90th percentile building height (m) within 50m buffer.
+Building Morphology,bldg_footprint_buf50_median,Median individual building footprint area (m2) within 50m buffer.
+Building Morphology,bldg_far_buf50_val,Floor area ratio (FAR) within 50m buffer: sum(footprint × height/3) / buffer area.
+Building Morphology,bldg_compactness_buf50_mean,"Mean building compactness within 50m buffer (e.g., 4πA/P2; higher = more compact)."
+Building Morphology,bldg_area_gini_buf50_val,Gini coefficient of building footprint areas within 50m buffer (inequality of sizes).
+Building Morphology,bldg_density_buf200_density,Building density within 200m buffer: buildings per hectare.
+Building Morphology,bldg_coverage_buf200_ratio,Building coverage within 200m buffer: total footprint area / buffer area (ratio).
+Building Morphology,bldg_perimeter_density_buf200_density,Building perimeter density within 200m buffer: total building perimeter length per hectare.
+Building Morphology,bldg_height_buf200_mean,Mean building height (m) within 200m buffer.
+Building Morphology,bldg_height_buf200_std,Std. dev. of building height (m) within 200m buffer (heterogeneity).
+Building Morphology,bldg_height_buf200_p90,90th percentile building height (m) within 200m buffer.
+Building Morphology,bldg_footprint_buf200_median,Median individual building footprint area (m2) within 200m buffer.
+Building Morphology,bldg_far_buf200_val,Floor area ratio (FAR) within 200m buffer: sum(footprint × height/3) / buffer area.
+Building Morphology,bldg_compactness_buf200_mean,"Mean building compactness within 200m buffer (e.g., 4πA/P2; higher = more compact)."
+Building Morphology,bldg_area_gini_buf200_val,Gini coefficient of building footprint areas within 200m buffer (inequality of sizes).
+Building Morphology,bldg_density_buf500_density,Building density within 500m buffer: buildings per hectare.
+Building Morphology,bldg_coverage_buf500_ratio,Building coverage within 500m buffer: total footprint area / buffer area (ratio).
+Building Morphology,bldg_perimeter_density_buf500_density,Building perimeter density within 500m buffer: total building perimeter length per hectare.
+Building Morphology,bldg_height_buf500_mean,Mean building height (m) within 500m buffer.
+Building Morphology,bldg_height_buf500_std,Std. dev. of building height (m) within 500m buffer (heterogeneity).
+Building Morphology,bldg_height_buf500_p90,90th percentile building height (m) within 500m buffer.
+Building Morphology,bldg_footprint_buf500_median,Median individual building footprint area (m2) within 500m buffer.
+Building Morphology,bldg_far_buf500_val,Floor area ratio (FAR) within 500m buffer: sum(footprint × height/3) / buffer area.
+Building Morphology,bldg_compactness_buf500_mean,"Mean building compactness within 500m buffer (e.g., 4πA/P2; higher = more compact)."
+Building Morphology,bldg_area_gini_buf500_val,Gini coefficient of building footprint areas within 500m buffer (inequality of sizes).
+Building Morphology,bldg_street_wall_seg_ratio,Street wall ratio: proportion of three sampled points along the segment with a building facade within ~15m (enclosure/continuity proxy).
+Building Morphology,bldg_setback_seg_mean,"Mean building setback (m): average distance from three sampled points along the segment (start, midpoint, end) to the nearest building facade."
+Land Cover & Greenness,lc_wc_tree_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'tree'.
+Land Cover & Greenness,lc_wc_shrubland_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'shrubland'.
+Land Cover & Greenness,lc_wc_grassland_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'grassland'.
+Land Cover & Greenness,lc_wc_cropland_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'cropland'.
+Land Cover & Greenness,lc_wc_builtup_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'builtup'.
+Land Cover & Greenness,lc_wc_bare_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'bare'.
+Land Cover & Greenness,lc_wc_snowice_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'snowice'.
+Land Cover & Greenness,lc_wc_water_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'water'.
+Land Cover & Greenness,lc_wc_wetland_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'wetland'.
+Land Cover & Greenness,lc_wc_mangroves_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'mangroves'.
+Land Cover & Greenness,lc_wc_mosslichen_buf50_ratio,WorldCover share within 50m buffer: proportion of area classified as 'mosslichen'.
+Land Cover & Greenness,lc_green_share_buf50_ratio,Greenness share within 50m buffer: sum of vegetated WorldCover classes / area.
+Land Cover & Greenness,lc_blue_share_buf50_ratio,Blue share within 50m buffer: water class share / area.
+Land Cover & Greenness,lc_impervious_share_buf50_ratio,Impervious share within 50m buffer: built-up class share / area.
+Land Cover & Greenness,lc_wc_entropy_buf50_val,Land-cover diversity within 50m buffer: Shannon entropy of WorldCover composition.
+Land Cover & Greenness,lc_wc_tree_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'tree'.
+Land Cover & Greenness,lc_wc_shrubland_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'shrubland'.
+Land Cover & Greenness,lc_wc_grassland_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'grassland'.
+Land Cover & Greenness,lc_wc_cropland_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'cropland'.
+Land Cover & Greenness,lc_wc_builtup_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'builtup'.
+Land Cover & Greenness,lc_wc_bare_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'bare'.
+Land Cover & Greenness,lc_wc_snowice_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'snowice'.
+Land Cover & Greenness,lc_wc_water_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'water'.
+Land Cover & Greenness,lc_wc_wetland_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'wetland'.
+Land Cover & Greenness,lc_wc_mangroves_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'mangroves'.
+Land Cover & Greenness,lc_wc_mosslichen_buf200_ratio,WorldCover share within 200m buffer: proportion of area classified as 'mosslichen'.
+Land Cover & Greenness,lc_green_share_buf200_ratio,Greenness share within 200m buffer: sum of vegetated WorldCover classes / area.
+Land Cover & Greenness,lc_blue_share_buf200_ratio,Blue share within 200m buffer: water class share / area.
+Land Cover & Greenness,lc_impervious_share_buf200_ratio,Impervious share within 200m buffer: built-up class share / area.
+Land Cover & Greenness,lc_wc_entropy_buf200_val,Land-cover diversity within 200m buffer: Shannon entropy of WorldCover composition.
+Land Cover & Greenness,lc_wc_tree_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'tree'.
+Land Cover & Greenness,lc_wc_shrubland_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'shrubland'.
+Land Cover & Greenness,lc_wc_grassland_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'grassland'.
+Land Cover & Greenness,lc_wc_cropland_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'cropland'.
+Land Cover & Greenness,lc_wc_builtup_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'builtup'.
+Land Cover & Greenness,lc_wc_bare_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'bare'.
+Land Cover & Greenness,lc_wc_snowice_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'snowice'.
+Land Cover & Greenness,lc_wc_water_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'water'.
+Land Cover & Greenness,lc_wc_wetland_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'wetland'.
+Land Cover & Greenness,lc_wc_mangroves_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'mangroves'.
+Land Cover & Greenness,lc_wc_mosslichen_buf500_ratio,WorldCover share within 500m buffer: proportion of area classified as 'mosslichen'.
+Land Cover & Greenness,lc_green_share_buf500_ratio,Greenness share within 500m buffer: sum of vegetated WorldCover classes / area.
+Land Cover & Greenness,lc_blue_share_buf500_ratio,Blue share within 500m buffer: water class share / area.
+Land Cover & Greenness,lc_impervious_share_buf500_ratio,Impervious share within 500m buffer: built-up class share / area.
+Land Cover & Greenness,lc_wc_entropy_buf500_val,Land-cover diversity within 500m buffer: Shannon entropy of WorldCover composition.
+Land Cover & Greenness,green_ndvi_buf50_mean,NDVI within 50m buffer: mean.
+Land Cover & Greenness,green_ndvi_buf50_median,NDVI within 50m buffer: median.
+Land Cover & Greenness,green_ndvi_buf50_std,NDVI within 50m buffer: standard deviation.
+Land Cover & Greenness,green_ndvi_buf50_p10,NDVI within 50m buffer: 10th percentile.
+Land Cover & Greenness,green_ndvi_buf50_p90,NDVI within 50m buffer: 90th percentile.
+Land Cover & Greenness,green_ndvi_buf200_mean,NDVI within 200m buffer: mean.
+Land Cover & Greenness,green_ndvi_buf200_median,NDVI within 200m buffer: median.
+Land Cover & Greenness,green_ndvi_buf200_std,NDVI within 200m buffer: standard deviation.
+Land Cover & Greenness,green_ndvi_buf200_p10,NDVI within 200m buffer: 10th percentile.
+Land Cover & Greenness,green_ndvi_buf200_p90,NDVI within 200m buffer: 90th percentile.
+Land Cover & Greenness,green_ndvi_buf500_mean,NDVI within 500m buffer: mean.
+Land Cover & Greenness,green_ndvi_buf500_median,NDVI within 500m buffer: median.
+Land Cover & Greenness,green_ndvi_buf500_std,NDVI within 500m buffer: standard deviation.
+Land Cover & Greenness,green_ndvi_buf500_p10,NDVI within 500m buffer: 10th percentile.
+Land Cover & Greenness,green_ndvi_buf500_p90,NDVI within 500m buffer: 90th percentile.
+Land Cover & Greenness,green_ndvi_gradient_multi_val,NDVI gradient: mean NDVI within 200m buffer minus mean NDVI within 500m buffer; positive = greener locally than the wider surroundings.
+POI Density,poi_l1_services_and_business_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'services_and_business'."
+POI Density,poi_l1_food_and_drink_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'food_and_drink'."
+POI Density,poi_l1_shopping_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'shopping'."
+POI Density,poi_l1_lifestyle_services_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'lifestyle_services'."
+POI Density,poi_l1_health_care_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'health_care'."
+POI Density,poi_l1_travel_and_transportation_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'travel_and_transportation'."
+POI Density,poi_l1_cultural_and_historic_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'cultural_and_historic'."
+POI Density,poi_l1_education_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'education'."
+POI Density,poi_l1_sports_and_recreation_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'sports_and_recreation'."
+POI Density,poi_l1_community_and_government_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'community_and_government'."
+POI Density,poi_l1_arts_and_entertainment_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'arts_and_entertainment'."
+POI Density,poi_l1_lodging_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'lodging'."
+POI Density,poi_l1_geographic_entities_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'geographic_entities'."
+POI Density,poi_l1_other_buf200_density,"POI density within 200m buffer (per hectare), category level-1: 'other'."
+POI Density,poi_l2_professional_service_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'professional_service'."
+POI Density,poi_l2_restaurant_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'restaurant'."
+POI Density,poi_l2_specialty_store_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'specialty_store'."
+POI Density,poi_l2_financial_service_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'financial_service'."
+POI Density,poi_l2_beauty_service_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'beauty_service'."
+POI Density,poi_l2_doctor_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'doctor'."
+POI Density,poi_l2_home_service_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'home_service'."
+POI Density,poi_l2_automotive_and_ground_transport_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'automotive_and_ground_transport'."
+POI Density,poi_l2_fashion_and_apparel_store_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'fashion_and_apparel_store'."
+POI Density,poi_l2_casual_eatery_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'casual_eatery'."
+POI Density,poi_l2_real_estate_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'real_estate'."
+POI Density,poi_l2_religious_organization_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'religious_organization'."
+POI Density,poi_l2_food_and_beverage_store_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'food_and_beverage_store'."
+POI Density,poi_l2_business_to_business_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'business_to_business'."
+POI Density,poi_l2_school_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'school'."
+POI Density,poi_l2_dentist_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'dentist'."
+POI Density,poi_l2_sports_and_recreation_venue_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'sports_and_recreation_venue'."
+POI Density,poi_l2_community_service_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'community_service'."
+POI Density,poi_l2_bar_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'bar'."
+POI Density,poi_l2_beverage_shop_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'beverage_shop'."
+POI Density,poi_l2_organization_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'organization'."
+POI Density,poi_l2_architectural_landmark_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'architectural_landmark'."
+POI Density,poi_l2_park_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'park'."
+POI Density,poi_l2_media_and_news_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'media_and_news'."
+POI Density,poi_l2_sports_and_fitness_instruction_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'sports_and_fitness_instruction'."
+POI Density,poi_l2_travel_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'travel'."
+POI Density,poi_l2_spa_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'spa'."
+POI Density,poi_l2_private_establishments_and_corporates_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'private_establishments_and_corporates'."
+POI Density,poi_l2_business_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'business'."
+POI Density,poi_l2_arts_and_crafts_space_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'arts_and_crafts_space'."
+POI Density,poi_l2_specialty_school_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'specialty_school'."
+POI Density,poi_l2_counseling_and_mental_health_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'counseling_and_mental_health'."
+POI Density,poi_l2_vehicle_dealer_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'vehicle_dealer'."
+POI Density,poi_l2_performing_arts_venue_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'performing_arts_venue'."
+POI Density,poi_l2_medical_center_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'medical_center'."
+POI Density,poi_l2_pets_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'pets'."
+POI Density,poi_l2_physical_therapy_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'physical_therapy'."
+POI Density,poi_l2_sports_club_and_league_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'sports_club_and_league'."
+POI Density,poi_l2_hotel_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'hotel'."
+POI Density,poi_l2_convenience_store_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'convenience_store'."
+POI Density,poi_l2_hospital_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'hospital'."
+POI Density,poi_l2_college_university_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'college_university'."
+POI Density,poi_l2_chiropractor_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'chiropractor'."
+POI Density,poi_l2_post_office_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'post_office'."
+POI Density,poi_l2_body_modification_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'body_modification'."
+POI Density,poi_l2_optometrist_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'optometrist'."
+POI Density,poi_l2_second_hand_store_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'second_hand_store'."
+POI Density,poi_l2_personal_care_service_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'personal_care_service'."
+POI Density,poi_l2_massage_therapy_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'massage_therapy'."
+POI Density,poi_l2_lounge_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'lounge'."
+POI Density,poi_l2_other_buf200_density,"POI density within 200m buffer (per hectare), category level-2: 'other'."
+Residential Population,pop_pop_density_buf50_density,Population density within 50m buffer: estimated residential population per hectare.
+Residential Population,pop_pop_density_buf200_density,Population density within 200m buffer: estimated residential population per hectare.
+Residential Population,pop_pop_density_buf500_density,Population density within 500m buffer: estimated residential population per hectare.
+Residential Population,pop_pop_gradient_multi_val,Multi-scale population gradient: population density within 200m buffer minus population density within 500m buffer; positive = denser local residential context than wider surroundings.
