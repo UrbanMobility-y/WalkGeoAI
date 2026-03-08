@@ -1,4 +1,4 @@
-# WalkGeoAI: An open-source framework for estimating street-level pedestrian density using globally available data
+# WalkGeoAI: Estimating street-level pedestrian density using globally available data
 
 **WalkGeoAI** is an end-to-end, open-source Python framework designed to estimate relative street-level pedestrian density for any city worldwide. By leveraging exclusively open geospatial data (e.g., OpenStreetMap, WorldPop, ESA WorldCover, Overture Maps) and a spatially-aware Graph Neural Network (GatedGCN), WalkGeoAI bypasses the need for expensive local pedestrian count data.
 
